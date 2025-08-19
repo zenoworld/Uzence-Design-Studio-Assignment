@@ -3,8 +3,8 @@
 
 ## UI Preview
 Here’s how the actual UI looks:
-![UI Screenshot](/public/InputField.png)
-![UI Screenshot](/public/DataTable.png)
+![UI Screenshot](./assets/InputField.png)
+![UI Screenshot](./assets/DataTable.png)
 
 This project is a **mini React component library** showcasing two reusable UI components built with **React, TypeScript, and Tailwind CSS**:
 
