@@ -1,69 +1,93 @@
-# React + TypeScript + Vite
+# 📘 React Component Library – InputField & DataTable
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **mini React component library** showcasing two reusable UI components built with **React, TypeScript, and Tailwind CSS**:
 
-Currently, two official plugins are available:
+1. **InputField** – a customizable form input with label, validation, and error states.  
+2. **DataTable** – a responsive and accessible data table with customizable columns and rows.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project also integrates **Storybook** for interactive component documentation and testing.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
+- ⚛️ **React + TypeScript** for strongly typed components
+- 🎨 **Tailwind CSS** for styling
+- 📚 **Storybook** for UI documentation and isolated component testing
+- ♿ **Accessibility-first** (ARIA labels, semantic markup)
+- 🧩 **Variants & Props** to customize components
+- 🛠️ Ready to extend into a full design system
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📂 Folder Structure
+src/
+├── components/
+│ ├── InputField/
+│ │ ├── InputField.tsx
+│ │ ├── variants.ts # Different styles (outlined, filled, error, etc.)
+│ │ └── InputField.stories.tsx
+│ ├── DataTable/
+│ │ ├── DataTable.tsx
+│ │ └── DataTable.stories.tsx
+│ └── index.ts # Export all components
+├── App.tsx # Demo usage
+├── main.tsx # Entry point
+└── index.css # Tailwind CSS imports
+.storybook/
+├── main.ts # Storybook config
+└── preview.ts # Tailwind & global styles
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧩 Components
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🔹 InputField
+A reusable input component with support for labels, error messages, and multiple variants.
+
+**Props:**
+- `label: string` – field label  
+- `placeholder?: string` – placeholder text  
+- `error?: string` – error message  
+- `type?: 'text' | 'email' | 'password'` – input type  
+- `variant?: 'outlined' | 'filled' | 'standard'` – visual style  
+
+**Example Usage:**
+```tsx
+<InputField 
+  label="Email" 
+  placeholder="Enter your email" 
+  type="email" 
+  error="Invalid email address" 
+  variant="outlined"
+/>
+
+
+Tech Stack : 
+React
+TypeScript
+Tailwind CSS
+Storybook
+Vite
+
+
+📚 Storybook Documentation
+Each component has dedicated Storybook stories to preview props and variants.
+Run Storybook: npm run storybook
+Storybook will be available at 👉 http://localhost:6006
+
+Getting Started :
+1️⃣ Clone the repo
+git clone https://github.com/your-username/react-component-library.git
+cd react-component-library
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Run the development server
+npm run dev
+Open http://localhost:5173/ in your browser.
+
+4️⃣ Run Storybook
+npm run storybook
+
