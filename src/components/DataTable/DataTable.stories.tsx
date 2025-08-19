@@ -34,6 +34,18 @@ export const Default: Story = {
     selectable: true,
   },
 };
+export const EmptyState: Story = {
+  args: {
+    data: [],
+    columns: [
+      { key: "id", title: "ID", dataIndex: "id" },
+      { key: "name", title: "Name", dataIndex: "name" },
+      { key: "email", title: "Email", dataIndex: "email" },
+      { key: "age", title: "Age", dataIndex: "age" },
+    ],
+    loading: false,
+  },
+};
 
 export const Loading: Story = {
   args: {
